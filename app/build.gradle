@@ -56,13 +56,22 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycleVersion"
 
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    def retrofitVersion = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation("androidx.fragment:fragment-ktx:1.6.1")
 
+    def mockitoVersion = '3.7.0'
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
 
+
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.0"
 
     testImplementation 'junit:junit:4.13.2'
+
+    androidTestImplementation 'org.mockito:mockito-android:2.12.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
